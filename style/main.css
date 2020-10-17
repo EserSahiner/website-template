@@ -100,6 +100,8 @@ body {
   #navbar-ul.responsive {
     display: block;
     width: 100%;
+    transition: all 2s ease 1s;
+    opacity: 0;
   }
   #navbar-ul.responsive .navbar-li {
     display: block;
@@ -109,6 +111,10 @@ body {
     text-align: center;
     width: 20%;
     margin: 0 auto;
+  }
+
+  #navbar-ul.responsive.fade {
+    opacity: 1;
   }
 }
 

@@ -1,0 +1,123 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+
+$color-first: #0B0236;
+$color-second: #9E0673;
+$color-third: #DE4600;
+$color-fourth: #08001C;
+
+body {
+    font-family: 'Exo', 'sans-serif';
+}
+
+.menu-toggle {
+    display: none;
+}
+
+#navbar {
+  background-color: $color-first;
+  &::after {
+    content: "";
+    display: block;
+    clear: both;
+  }  
+}
+
+#navbar img {
+    width: 250px;
+    margin: 1rem 2rem;
+}
+
+
+#navbar-ul {
+    //background-color: $color-first;
+    list-style-type: none;
+    overflow: hidden;
+    float: right;
+    
+}
+
+.navbar-li {
+    display: inline-block;
+    //float: left;
+    padding: 1rem;
+}
+
+.navbar-link {
+    position: relative;
+    text-decoration: none;
+    display: block;
+    color: $color-second;
+    padding: 1rem;
+    border-radius: 25px;
+    transition: all 0.4s;
+    &::after{
+        content: "";
+        display: block;
+        width: 0%;
+        height: 2px;
+        background:#fff;
+        transition: width .3s;
+    }
+    &:hover::after {
+        width: 100%;
+        color: #fff;
+        background-color: #fff;
+    }
+    &:hover, .active {
+        background-color: $color-second;
+        color: #fff;
+    }
+}
+
+@media (max-width:768px){
+
+    #navbar img {
+        width: 100px;
+        margin: 2rem 1rem;
+    }
+
+    .menu-toggle {
+        float: right;
+        display: block;
+        width: 40px;
+        height: 40px;
+        margin: 1.5rem 0.5rem;
+        cursor: pointer;
+        text-align: center;
+        color: $color-second;
+        &:before {
+            content: "\f0c9";
+            font-family: fontAwesome;
+            line-height: 40px;
+        }
+    }
+
+    .menu-toggle.responsive:before{
+        content: "\f00d";
+        font-family: fontAwesome;
+        line-height: 40px;
+    }
+
+    #navbar-ul {
+        display: none;
+    }
+
+    #navbar-ul.responsive {
+        display: block;
+        width: 100%;
+        .navbar-li {
+            display: block;
+            .navbar-link {
+                display: block;
+                text-align: center;
+                width: 20%;
+                margin: 0 auto;
+                
+            }
+        }
+    }
+}

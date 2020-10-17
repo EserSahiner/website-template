@@ -1,6 +1,7 @@
 * {
     margin: 0;
     padding: 0;
+    -webkit-tap-highlight-color: transparent;
 }
 
 
@@ -116,7 +117,6 @@ body {
                 text-align: center;
                 width: 20%;
                 margin: 0 auto;
-                
             }
         }
     }

@@ -13,9 +13,14 @@ const btnRes = document.querySelector('.menu-toggle');
 
 const ulMenu = document.querySelector('#navbar-ul');
 
+const liMenu = document.querySelectorAll('.navbar-li');
+
+
 
 btnRes.addEventListener('click', () => {
     ulMenu.classList.toggle('responsive');
-    ulMenu.classList.toggle('fade');
     btnRes.classList.toggle('responsive');
+    liMenu.forEach(e => {
+        e.classList.toggle('fade');
+    });
 });

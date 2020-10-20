@@ -27,6 +27,12 @@ body {
     display: none;
 }
 
+header::after{
+    content: "";
+    display: block;
+    clear: both;
+}
+
 #navbar {
   background-color: $color-first;
   &::after {
@@ -115,7 +121,60 @@ body {
     }
 }
 
-@media (max-width:1200px){
+#container {
+    width: 100%;
+}
+
+.grid-box-elements{
+    max-width: 1268px;
+    width: 100%;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+}
+
+.big-content-box{
+    grid-column: 1/4;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 1fr;
+    padding: 1rem;
+    margin-top: 1rem;
+    .bcb-img{
+        justify-self: center;
+        align-self: center;
+        padding: 0rem;
+        img{
+            border-radius: 10px;
+            width: 100%;
+        }
+    }
+    .bcb-content {
+        align-self: center;
+        justify-self: center;
+        padding: 1rem;
+        .bcb-header{
+            margin-left: 1rem;
+            text-align: left;
+            color: $color-second;
+        }
+        .bcb-text{
+            text-indent: 1rem;
+        }
+    }
+}
+
+.small-content-box{
+    padding: 1rem;
+    h1{
+        text-align: center;
+    }
+
+}
+
+
+@media (max-width:1268px){
 
     #navbar img {
         width: 225px;
@@ -189,5 +248,9 @@ body {
         &:hover::after{
             width: 0;
         }
+    }
+
+    .grid-box-elements{
+        font-size: 14px;
     }
 }

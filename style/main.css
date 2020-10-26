@@ -274,6 +274,18 @@ header::after {
   .grid-box-elements {
     font-size: 14px;
   }
+
+  .parallax-container {
+    width: 95%;
+    height: 300px;
+    margin: 2rem auto;
+  }
+  .parallax-container h2 {
+    font-size: 2rem;
+  }
+  .parallax-container .p-text {
+    font-size: 2rem;
+  }
 }
 
 /*# sourceMappingURL=main.css.map */

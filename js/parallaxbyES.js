@@ -1,6 +1,7 @@
 const parallaxBox = document.querySelector('.parallax-container');
 
 parallaxBox.addEventListener('pointermove' , parallax)
+parallaxBox.addEventListener('touchmove' , parallax)
 
 function parallax(e) {
     this.querySelectorAll('.pitem').forEach(q => {
@@ -17,6 +18,7 @@ function parallax(e) {
 };
 
 parallaxBox.addEventListener('pointerleave', panimationOut);
+parallaxBox.addEventListener('touchend', panimationOut);
 
 function panimationOut(){
     this.querySelectorAll('.pitem').forEach(q => {

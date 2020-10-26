@@ -169,10 +169,10 @@ header::after {
 .parallax-container {
   border-radius: 30px;
   position: relative;
-  width: 1000px;
+  width: 1268px;
   height: 500px;
   background-color: #111;
-  margin: 0 auto;
+  margin: 2rem auto;
   overflow: hidden;
   display: flex;
   justify-content: center;

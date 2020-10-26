@@ -140,7 +140,6 @@ header::after{
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr;
-    padding: 1rem;
     margin-top: 1rem;
     .bcb-img{
         justify-self: center;
@@ -148,7 +147,8 @@ header::after{
         padding: 0rem;
         img{
             border-radius: 10px;
-            width: 100%;
+            width: 90%;
+            margin-left: 10px;
         }
     }
     .bcb-content {
@@ -168,6 +168,8 @@ header::after{
 
 .small-content-box{
     padding: 1rem;
+    align-self: center;
+    justify-self: center;
     h1{
         text-align: center;
     }
@@ -179,7 +181,7 @@ header::after{
     position: relative;
     width: 1000px; height: 500px;
     background-color: #111;
-    margin: 2rem auto;
+    margin: 0 auto;
     overflow: hidden;
     display: flex;
     justify-content: center;

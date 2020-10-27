@@ -226,14 +226,20 @@ header::after{
         cursor: pointer;
         text-align: center;
         color: $color-second;
-        &:before {
+        transition: transform 1s, opacity 1s, text-shadow 1s ease;
+        &:hover{text-shadow: 0 0 20px #fff, 0 0 30px #ff4da6, 0 0 40px #ff4da6, 0 0 50px #ff4da6, 0 0 60px #ff4da6, 0 0 70px #ff4da6, 0 0 80px #ff4da6;}
+        &:after {
             content: "\f0c9";
             font-family: fontAwesome;
             line-height: 40px;
         }
     }
 
-    .menu-toggle.responsive:before{
+    .menu-toggle.responsive{
+        transform:rotate(360deg);
+    }
+
+    .menu-toggle.responsive:after{
         content: "\f00d";
         font-family: fontAwesome;
         line-height: 40px;
@@ -259,7 +265,7 @@ header::after{
     .navbar-li {
         display: block;
         opacity: 0;
-        transition: opacity 3s ease-in;
+        transition: opacity 1s ease;
         padding-top: 0.1rem;
         &:first-child{
             margin-top:2rem;

@@ -113,12 +113,13 @@ header::after {
 }
 
 #container {
+  max-width: 1268px;
   width: 100%;
+  margin: 0 auto;
   box-sizing: border-box;
 }
 
 .grid-box-elements {
-  max-width: 1268px;
   width: 100%;
   margin: 0 auto;
   display: grid;
@@ -140,7 +141,7 @@ header::after {
 }
 .big-content-box .bcb-img img {
   border-radius: 10px;
-  width: 90%;
+  width: 100%;
   margin-left: 10px;
 }
 .big-content-box .bcb-content {
@@ -169,8 +170,8 @@ header::after {
 .parallax-container {
   border-radius: 30px;
   position: relative;
-  width: 1268px;
-  height: 500px;
+  width: 100%;
+  height: 720px;
   background-color: #111;
   margin: 2rem auto;
   overflow: hidden;
@@ -205,6 +206,69 @@ header::after {
   z-index: 2;
 }
 
+#slider-main {
+  width: 100%;
+  margin: 2rem auto;
+  position: relative;
+  overflow: hidden;
+  border-radius: 30px;
+}
+#slider-main #slider-arrowr {
+  position: absolute;
+  top: 45%;
+  right: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 5rem;
+}
+#slider-main #slider-arrowr:hover {
+  color: #cccccc;
+}
+#slider-main #slider-arrowl {
+  position: absolute;
+  top: 45%;
+  left: 1rem;
+  text-decoration: none;
+  color: #fff;
+  font-size: 5rem;
+}
+#slider-main #slider-arrowl:hover {
+  color: #cccccc;
+}
+
+#slide {
+  width: 100%;
+  position: relative;
+  transition: all 2s;
+}
+#slide #slide-image-box {
+  width: 100%;
+  display: flex;
+  margin-left: 0%;
+}
+#slide #slide-image-box .slide-image {
+  width: 100%;
+}
+#slide #slide-info {
+  width: 100%;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  padding: 2rem;
+  background: rgba(0, 0, 0, 0.5);
+}
+#slide #slide-info #info-header {
+  display: inline-block;
+}
+
+@keyframes slideReset {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
 @media (max-width: 1268px) {
   .menu-toggle {
     float: right;
@@ -281,13 +345,10 @@ header::after {
     width: 0;
   }
 
-  .grid-box-elements {
-    font-size: 14px;
-  }
-
   .parallax-container {
-    width: 95%;
-    height: 300px;
+    max-width: 472px;
+    width: 100%;
+    height: 250px;
     margin: 2rem auto;
   }
   .parallax-container h2 {
@@ -295,6 +356,64 @@ header::after {
   }
   .parallax-container .p-text {
     font-size: 2rem;
+  }
+
+  #slider-main {
+    max-width: 472px;
+    width: 100%;
+    margin: 2rem auto;
+    position: relative;
+    overflow: hidden;
+    border-radius: 20px;
+  }
+  #slider-main #slider-arrowr {
+    position: absolute;
+    top: 45%;
+    right: 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+  }
+  #slider-main #slider-arrowr:hover {
+    color: #cccccc;
+  }
+  #slider-main #slider-arrowl {
+    position: absolute;
+    top: 45%;
+    left: 1rem;
+    text-decoration: none;
+    color: #fff;
+    font-size: 3rem;
+  }
+  #slider-main #slider-arrowl:hover {
+    color: #cccccc;
+  }
+
+  #slide {
+    width: 100%;
+    position: relative;
+    transition: all 2s;
+  }
+  #slide #slide-image-box {
+    width: 100%;
+    display: flex;
+    margin-left: 0%;
+  }
+  #slide #slide-image-box .slide-image {
+    width: 100%;
+  }
+  #slide #slide-info {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    padding: 1rem;
+    background: rgba(0, 0, 0, 0.5);
+  }
+  #slide #slide-info #info-header {
+    display: inline-block;
+  }
+  #slide #slide-info #info-content {
+    font-size: 0.9rem;
   }
 }
 
